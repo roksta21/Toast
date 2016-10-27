@@ -1,0 +1,29 @@
+{
+    "name": "roksta/laravel-toastr",
+    "description": "Toastr notifications in laravel",
+    "type": "library",
+    "keywords": ["notifications", "alert", "laravel notifications"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "roksta",
+            "email": "roksta21@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "helpers/helpers.php"
+        ],
+        "psr-4": {
+            "Roksta\\Toastr\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/session": "~5.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    },
+    "minimum-stability": "stable"
+}
