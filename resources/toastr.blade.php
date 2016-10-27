@@ -5,13 +5,15 @@
             "{{ $toast['message']}}",
             "{{ $toast['title']}}",
             {
-                @foreach($toast['options'] as $option => $value)
-                    @if (is_string($value))
-                        {{ $option }} : '{!! $value !!}',
-                    @else 
-                        {{ $option }} : {!! $value !!},
-                    @endif
-                @endforeach
+                @if (isset($toast['options']))
+                    @foreach($toast['options'] as $option => $value)
+                        @if (is_string($value))
+                            {{ $option }} : '{!! $value !!}',
+                        @else 
+                            {{ $option }} : {!! $value !!},
+                        @endif
+                    @endforeach
+                @endif
 
                 closeButton: true
             }

@@ -12,8 +12,11 @@ Install [Toastr](https://github.com/CodeSeven/toastr) via npm
     npm install toastr --save
 ```
 
-Require the js in `resources/assets/js/bootstrap.js` as `require('toastr');`
-Import the sass in `resources/assets/sass/app.scss` as `@import "node_modules/toastr/toastr";`
+Require the js in resources/assets/js/bootstrap.js as 
+`window.toastr = require('toastr');`
+
+Import the sass in resources/assets/sass/app.scss as 
+`@import "node_modules/toastr/toastr";`
 then gulp;
 
 Include the service provider and its alias within the `config/app.php`.
@@ -34,7 +37,7 @@ php artisan vendor:publish
 ```
 to publish the package view in your resources/assets/vendor/roksta/toastr.blade.php
 
-Add `{!! Toast::view() !!}` in your main view, eg,
+Add `@include('vendor.roksta.toastr')` in your main view, eg,
 ```html
     <!DOCTYPE html>
     <html>
@@ -45,7 +48,7 @@ Add `{!! Toast::view() !!}` in your main view, eg,
     <body>
         <div id="app"></div>
         <script type="text/javascript" src="js/app.js"></script>
-        {!! Toast::view() !!}
+        @include('vendor.roksta.toastr')
     </body>
     </html>
 ```
