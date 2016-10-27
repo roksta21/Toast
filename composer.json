@@ -25,5 +25,5 @@
     "require-dev": {
         "mockery/mockery": "dev-master"
     }
-    // "minimum-stability": "stable"
+    
 }
