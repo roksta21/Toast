@@ -1,5 +1,5 @@
 {
-    "name": "roksta/ltoastr",
+    "name": "roksta/toast",
     "description": "Toastr notifications in laravel",
     "type": "library",
     "keywords": ["notifications", "alert", "laravel notifications"],
