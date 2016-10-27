@@ -1,5 +1,5 @@
 {
-    "name": "roksta/laravel-toastr",
+    "name": "roksta/ltoastr",
     "description": "Toastr notifications in laravel",
     "type": "library",
     "keywords": ["notifications", "alert", "laravel notifications"],

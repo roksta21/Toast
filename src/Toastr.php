@@ -62,4 +62,9 @@ class Toastr
         return $this;
     }
 
+    public function view()
+    {
+        return "@include('vendor.roksta.toastr')";
+    }
+
 }

@@ -13,7 +13,9 @@ class ToastrServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+        $this->publishes(array(
+            __DIR__.'/../resources/' => base_path('resources/views/vendor/roksta')
+        ));
     }
 
     /**
