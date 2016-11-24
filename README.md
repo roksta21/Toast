@@ -19,6 +19,11 @@ Import the sass in resources/assets/sass/app.scss as
 `@import "node_modules/toastr/toastr";`
 then gulp;
 
+Install via composer
+```bash
+    composer require roksta/toast
+```
+
 Include the service provider and its alias within the `config/app.php`.
 
 ```php
