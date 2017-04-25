@@ -38,7 +38,7 @@ Include the service provider and its alias within the `config/app.php`.
 
 Run 
 ```bash
-php artisan vendor:publish
+php artisan vendor:publish --provider="Roksta\Toastr\ToastrServiceProvider"
 ```
 to publish the package view in your resources/assets/vendor/roksta/toastr.blade.php
 
