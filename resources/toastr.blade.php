@@ -24,7 +24,7 @@
 @if($errors->count() > 0)
     <script type="text/javascript">
         @foreach($errors->all() as $error)
-            toastr.error("{!! $error !!}}", null, {closeButton: true, preventDuplicates: true, timeOut: 0});
+            toastr.error("{!! $error !!}", null, {closeButton: true, preventDuplicates: true, timeOut: 0});
         @endforeach
     </script>
 @endif
