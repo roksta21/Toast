@@ -17,7 +17,7 @@ Require the js in resources/assets/js/bootstrap.js as
 
 Import the sass in resources/assets/sass/app.scss as 
 `@import "node_modules/toastr/toastr";`
-then gulp;
+then build via npm `npm run prod`.
 
 Install via composer
 ```bash
