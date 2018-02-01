@@ -23,18 +23,7 @@ Install via composer
 ```bash
     composer require roksta/toast
 ```
-
-Include the service provider and its alias within the `config/app.php`.
-
-```php
-'providers' => [
-    Roksta\Toastr\ToastrServiceProvider::class,
-];
-
-'aliases' => [
-    'Toast' => Roksta\Toastr\Toast::class,
-];
-```
+Laravel will automatically discover the provider and the alias.
 
 Run 
 ```bash
