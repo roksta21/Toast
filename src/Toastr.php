@@ -62,9 +62,19 @@ class Toastr
         return $this;
     }
 
-    public function view()
+    public function options(Array $options)
     {
-        return "@include('vendor.roksta.toastr')";
-    }
+        $toast = Session::get('toast');
 
+        if (! $toast->has('options')) {
+            $toast->put('options', collect($options));
+        } else {
+            $current_options = $toast->get('options');
+            $all_options = $current_options->merge($options);
+
+            $toast->put('options', collect($all_options));
+        }
+
+        return $this;
+    }
 }

@@ -2,39 +2,14 @@
 Simple toastr notifications for laravel
 
 ## Installation
-
-<!-- Pull in the package through Composer. -->
-
-<!-- Run `composer require roksta/toast` -->
-
-Install [Toastr](https://github.com/CodeSeven/toastr) via npm 
-```bash
-    npm install toastr --save
-```
-
-Require the js in resources/assets/js/bootstrap.js as 
-`window.toastr = require('toastr');`
-
-Import the sass in resources/assets/sass/app.scss as 
-`@import "node_modules/toastr/toastr";`
-then gulp;
-
-Install via composer
+Install this package via composer
 ```bash
     composer require roksta/toast
 ```
+Laravel auto-discovery will find the required service providers and aliases.
 
-Include the service provider and its alias within the `config/app.php`.
-
-```php
-'providers' => [
-    Roksta\Toastr\ToastrServiceProvider::class,
-];
-
-'aliases' => [
-    'Toast' => Roksta\Toastr\Toast::class,
-];
-```
+#### [Toastr](https://github.com/CodeSeven/toastr)
+Toastr is enabled by default via CDN. 
 
 Run 
 ```bash
@@ -42,7 +17,7 @@ php artisan vendor:publish --provider="Roksta\Toastr\ToastrServiceProvider"
 ```
 to publish the package view in your resources/assets/vendor/roksta/toastr.blade.php
 
-Add `@include('vendor.roksta.toastr')` in your main view, eg,
+Add `@include('vendor.roksta.toastr')` in your main view, under your jQuery file import eg,
 ```html
     <!DOCTYPE html>
     <html>
@@ -60,7 +35,7 @@ Add `@include('vendor.roksta.toastr')` in your main view, eg,
 
 ## Use
 
-Just use the helper function `toast()` to make the notifier.
+Use the helper function `toast()` to make the default notifiers.
 
 ```php
     toast()->success('message', 'title');
@@ -68,7 +43,17 @@ Just use the helper function `toast()` to make the notifier.
     toast()->warning('message', 'title');
     toast()->error('message', 'title');
 ```
-You may specify the timeout duration by 
+
+You may specify all the other options dictated by [Toastr](https://github.com/CodeSeven/toastr) by adding the options method to your toast. 
 ```php
-    toast()->success('message', 'title')->timeOut(5000);
+    toast()->success('message', 'title')->options([
+        'timeOut' => 5000,
+        'closeButton' => 1,
+        'closeHtml' => '<button><i class="icon-off"></i></button>'
+    ]);
 ```
+
+*Note that for boolean values such as `closeButton => true` should be expressed as 0 for false or 1 for true*
+
+### Licence
+The package is provided under the MIT License.

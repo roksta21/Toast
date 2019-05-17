@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
 @if(Session::has('toast'))
     <?php $toast = Session::pull('toast'); ?>
     <script type="text/javascript">
@@ -14,8 +17,6 @@
                         @endif
                     @endforeach
                 @endif
-
-                closeButton: true
             }
         );
     </script>
