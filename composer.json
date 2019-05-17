@@ -24,6 +24,15 @@
     },
     "require-dev": {
         "mockery/mockery": "dev-master"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Roksta\\Toastr\\ToastrServiceProvider"
+            ],
+            "aliases": {
+                "Toast": "Roksta\\Toastr\\Toast"
+            }
+        }
     }
-    
 }

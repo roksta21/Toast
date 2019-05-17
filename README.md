@@ -17,13 +17,24 @@ Require the js in resources/assets/js/bootstrap.js as
 
 Import the sass in resources/assets/sass/app.scss as 
 `@import "node_modules/toastr/toastr";`
-then build via npm `npm run prod`.
+then gulp;
 
 Install via composer
 ```bash
     composer require roksta/toast
 ```
-Laravel will automatically discover the provider and the alias.
+
+Include the service provider and its alias within the `config/app.php`.
+
+```php
+'providers' => [
+    Roksta\Toastr\ToastrServiceProvider::class,
+];
+
+'aliases' => [
+    'Toast' => Roksta\Toastr\Toast::class,
+];
+```
 
 Run 
 ```bash
